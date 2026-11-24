@@ -115,3 +115,72 @@ GET {{server}}/odata/v4/book/FetchBooks(borrowerID='B001')
 
 ### Delete Book by ID
 DELETE {{server}}/odata/v4/book/Books(79f59353-998f-42b6-8110-f9d2615f6c5e)
+
+### Insert Products
+POST {{server}}/odata/v4/northwind/insertTBProducts
+Content-Type: application/json
+
+{
+    "records": [
+        {
+            "ProductID": 1,
+            "ProductName": "Sample Coffee",
+            "SupplierID": 1,
+            "CategoryID": 1,
+            "QuantityPerUnit": "10 boxes",
+            "UnitPrice": 250.00,
+            "UnitsInStock": 25,
+            "UnitsOnOrder": 5,
+            "ReorderLevel": 10,
+            "Discontinued": false
+        }
+    ]
+}
+
+
+### Insert Suppliers
+POST {{server}}/odata/v4/northwind/insertTBSuppliers
+Content-Type: application/json
+
+{
+    "records": [
+        {
+            "SupplierID": 1,
+            "CompanyName": "Sample Beverage Supplier",
+            "ContactName": "Sample Contact",
+            "ContactTitle": "Sales Representative",
+            "Address": "100 Sample Street",
+            "City": "Manila",
+            "Region": "NCR",
+            "PostalCode": "1000",
+            "Country": "Philippines",
+            "Phone": "02-8123-4567",
+            "Fax": null,
+            "HomePage": null
+        }
+    ]
+}
+
+
+### Insert Categories
+POST {{server}}/odata/v4/northwind/insertTBCategories
+Content-Type: application/json
+
+{
+    "records": [
+        {
+            "CategoryID": 1,
+            "CategoryName": "Beverages",
+            "Description": "Soft drinks, coffees, teas, beers, and ales"
+        },
+        {
+            "CategoryID": 2,
+            "CategoryName": "Condiments",
+            "Description": "Sweet and savory sauces and seasonings"
+        }
+    ]
+}
+
+
+### Fetch Combined Northwind Data
+GET {{server}}/odata/v4/northwind/fetchNorthwindData()

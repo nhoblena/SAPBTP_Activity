@@ -9,35 +9,35 @@ entity Books {
 }
 
 entity Products {
-    key ProductID    : UUID;
-    ProductName      : String(100);
-    SupplierID       : String(100);
-    CategoryID       : String(100);
-    QuantityPerUnit  : String(100);
-    UnitPrice        : String(100);
-    UnitsInStock     : Integer;
-    UnitsOnOrder     : Integer;
-    ReorderLevel     : Integer;
-    Discontinued     : String(100);
+    key ProductID   : Integer;
+    ProductName     : String(100);
+    SupplierID      : Integer;
+    CategoryID      : Integer;
+    QuantityPerUnit : String(100);
+    UnitPrice       : Decimal(15,2);
+    UnitsInStock    : Integer;
+    UnitsOnOrder    : Integer;
+    ReorderLevel    : Integer;
+    Discontinued    : Boolean;
 }
 
 entity Suppliers {
-    key SupplierID : UUID;
-    CompanyName    : String(100);
-    ContactName    : String(100);
-    ContactTitle   : String(100);
-    Address        : String(100);
-    City           : String(100);
-    Region         : String(100);
-    PostalCode     : String(100);
-    Country        : String(100);
-    Phone          : String(100);
-    Fax            : Integer;
-    HomePage       : String(200);
+    key SupplierID  : Integer;
+    CompanyName     : String(100);
+    ContactName     : String(100);
+    ContactTitle    : String(100);
+    Address         : String(100);
+    City            : String(100);
+    Region          : String(100);
+    PostalCode      : String(100);
+    Country         : String(100);
+    Phone           : String(100);
+    Fax             : String(100);
+    HomePage        : String(500);
 }
 
 entity Categories {
-    CategoryID   : String;
-    CategoryName : String;
-    Description  : String;
+    key CategoryID  : Integer;
+    CategoryName    : String(100);
+    Description     : String(500);
 }
