@@ -2,7 +2,7 @@ namespace sap.cap.backend;
 
 entity Books {
     key ID       : UUID;
-    borrowerName : String(50);
+    borrowerID : String(50);
     bookTitle    : String(100);
     authorName   : String(100);
     readDate     : Date;

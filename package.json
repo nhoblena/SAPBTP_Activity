@@ -1,0 +1,26 @@
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "Welcome to your new CAP project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhoblena/SAPBTP_Activity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nhoblena/SAPBTP_Activity/issues"
+  },
+  "homepage": "https://github.com/nhoblena/SAPBTP_Activity#readme",
+  "dependencies": {
+    "@cap-js/hana": "^3",
+    "@sap/cds": "^10.2.2",
+    "@sap/hana-client": "^2.30.32"
+  }
+}
